@@ -12,19 +12,19 @@
     <form action="" method="post">
         <table border="1">
             <tr>
-                <td>Sisi Alas</td>
+                <td>Sisi Alas/a</td>
                 <td>
                     <input type="text" name="a" require>
                 </td>
             </tr>
             <tr>
-                <td>Sisi Miring</td>
+                <td>Sisi Miring/b</td>
                 <td>
                 <input type="text" name="b" require>
                 </td>
             </tr>
             <tr>
-                <td>Tinggi</td>
+                <td>Tinggi/t</td>
                 <td>
                 <input type="text" name="tinggi" require>
                 </td>
@@ -42,7 +42,8 @@
         $b=$_POST['b'];
         $tinggi=$_POST['tinggi'];
         $L= $a * $tinggi;
-        $Kli= 2 * ($a + $b);
+        $Keliling= 2 * ($a + $b);
+        $sisi= ($Keliling / 2) - $a;
         ?>
         <tr>
             <th>Luas Jajar Genjang</th>
@@ -50,7 +51,8 @@
         </tr>
         <tr>
             <td><?php echo "$a * $tinggi = $L"; ?></td>
-            <td><?php echo "2 * ($a + $b) = $Kli"; ?></td>
+            <td><?php echo "2 * ($a + $b) = $Keliling"; ?></td>
+            <td><?php echo "($Keliling / 2) - $a = $sisi"; ?></td>
         </tr>
     </table>
     
