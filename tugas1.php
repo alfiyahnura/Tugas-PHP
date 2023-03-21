@@ -43,15 +43,19 @@
         $tinggi=$_POST['tinggi'];
         $L= $a * $tinggi;
         $Keliling= 2 * ($a + $b);
+        $alas= ($Keliling / 2) - $b;
         $sisi= ($Keliling / 2) - $a;
         ?>
         <tr>
             <th>Luas Jajar Genjang</th>
             <th>Keliling Jajar Genjang</th>
+            <th>Alas/a</th>
+            <th>Sisi Miring/b</th>
         </tr>
         <tr>
             <td><?php echo "$a * $tinggi = $L"; ?></td>
             <td><?php echo "2 * ($a + $b) = $Keliling"; ?></td>
+            <td><?php echo "($Keliling / 2) - $b = $alas"; ?></td>
             <td><?php echo "($Keliling / 2) - $a = $sisi"; ?></td>
         </tr>
     </table>
