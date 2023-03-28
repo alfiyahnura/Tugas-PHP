@@ -19,7 +19,6 @@ $min_nilai = min($jml_nilai);
 $rata = $total/$jumlah_mahasiswa;
 $keterangan = [
     'Jumlah Mahasiswa'=>$jumlah_mahasiswa,
-    'Total Nilai'=>$total,
     'Nilai Tertinggi'=>$max_nilai,
     'Nilai Terendah'=>$min_nilai,
     'Rata-Rata'=>$rata
