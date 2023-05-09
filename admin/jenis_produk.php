@@ -24,8 +24,9 @@ $jenis_produk = $model->JenisProduk();
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
+                                <!-- <i class="fas fa-table me-1"></i>
+                                DataTable Example -->
+                                <a href="index.php?url=jenis_produk_form" class="btn btn-primary btn-sm"> Tambah</a>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -37,13 +38,13 @@ $jenis_produk = $model->JenisProduk();
                                             
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <!-- <tfoot>
                                         <tr>
                                             <th>No</th>
                                             <th>Nama</th>
                                             <th>Keterangan</th>   
                                         </tr>
-                                    </tfoot>
+                                    </tfoot> -->
                                     <tbody>
                                         <!-- hapus dari baris 64 sampai 511 -->
                                         <!-- dari <tr> ke </tr> -->
@@ -56,7 +57,15 @@ $jenis_produk = $model->JenisProduk();
                                             <td><?= $no ?></td>
                                             <td><?= $row['nama']?></td>
                                             <td><?= $row['ket']?></td>
-                                           
+                                            <td>
+                                                <form action="jenis_produk_controller.php" method="POST">
+                                                    <a class="btn btn-info btn-sm" href="index.php?url=jenis_produk_detail&id=<?= $row ['id'] ?>">Detail</a>
+                                                    <a class="btn btn-warning btn-sm">Ubah</a>
+                                                    <a class="btn btn-danger btn-sm">Hapus</a>
+
+                                                    <input type="hidden" name="idx" value="<?= $row['id']?>">
+                                                </form>
+                                            </td>
                                         </tr>
                                       <?php
                                         $no++; 

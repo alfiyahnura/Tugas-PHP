@@ -23,8 +23,9 @@ $data_pelanggan = $model->dataPelanggan();
                         </div>
                         <div class="card mb-4">
                             <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
+                                <!-- <i class="fas fa-table me-1"></i>
+                                DataTable Example -->
+                                <a href="index.php?url=pelanggan_form" class="btn btn-primary btn-sm"> Tambah</a>
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -40,7 +41,7 @@ $data_pelanggan = $model->dataPelanggan();
                                             <th>Kartu Id</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
+                                    <!-- <tfoot>
                                         <tr>
                                             <th>No</th>
                                             <th>Kode</th>
@@ -51,7 +52,7 @@ $data_pelanggan = $model->dataPelanggan();
                                             <th>Email</th>
                                             <th>Kartu Id</th>
                                         </tr>
-                                    </tfoot>
+                                    </tfoot> -->
                                     <tbody>
                                         <?php
                                         $no = 1;
@@ -67,6 +68,15 @@ $data_pelanggan = $model->dataPelanggan();
                                             <td><?= $row['tgl_lahir'] ?></td>
                                             <td><?= $row['email'] ?></td>
                                             <td><?= $row['kartu_id'] ?></td>
+                                            <td>
+                                                <form action="pelanggan_controller.php" method="POST">
+                                                    <a class="btn btn-info btn-sm" href="index.php?url=pelanggan_detail&id=<?= $row ['id'] ?>">Detail</a>
+                                                    <a class="btn btn-warning btn-sm">Ubah</a>
+                                                    <a class="btn btn-danger btn-sm">Hapus</a>
+
+                                                    <input type="hidden" name="idx" value="<?= $row['id']?>">
+                                                </form>
+                                            </td>
                                         </tr>
                                         <?php
                                             $no++;
