@@ -1,4 +1,5 @@
 <?php
+session_start();
 //memanggil dan memproses file bagian atas
 include_once 'koneksi.php';
 include_once 'models/Produk.php';
