@@ -4,7 +4,7 @@ $model = new Pelanggan();
 $pelanggan = $model->getPelanggan($id);
 
 ?>
-
+<h1 class="mt-4">Detail Pelanggan</h1>
 <div>
 <table id="datatablesSimple">
     <thead>

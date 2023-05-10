@@ -4,7 +4,7 @@ $model = new Kartu();
 $kartu = $model->getKartu($id);
 
 ?>
-
+<h1 class="mt-4">Detail Kartu</h1>
 <div>
     <table id="datatablesSimple">
         <thead>

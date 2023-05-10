@@ -4,7 +4,7 @@ $model = new JenisProduk();
 $jenis_produk = $model->getJenisProduk($id);
 
 ?>
-
+<h1 class="mt-4">Detail Jenis Produk</h1>
 <div>
     <table id="datatablesSimple">
         <thead>

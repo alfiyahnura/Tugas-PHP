@@ -4,7 +4,7 @@ $model = new Pesanan();
 $pesanan = $model->getPesanan($id);
 
 ?>
-
+<h1 class="mt-4">Detail Pesanan</h1>
 <div>
 <table id="datatablesSimple">
     <thead>
